@@ -4,9 +4,10 @@ import "./App.css";
 
 import Header from "./components/Header";
 import List from "./components/List";
+
 import { id, className } from "postcss-selector-parser";
 
-function App() {
+function App(props) {
   const [lists, setList] = useState([]);
   const [item, setItem] = useState("");
 
@@ -16,6 +17,12 @@ function App() {
     setItem("");
   }
 
+
+function deletar(indice){
+  setList(lists.filter((item,id)=> id !== indice))
+      
+    }
+  
   return (
     <>
       <Header title="To do List" />
@@ -42,9 +49,10 @@ function App() {
         </button>
       </div>
 
-      <List lists={lists} />
+      <List lists={lists} deletar={()=>{deletar(indice)}}/>
     </>
   );
 }
+;
 
 export default App;
