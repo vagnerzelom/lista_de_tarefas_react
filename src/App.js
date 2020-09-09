@@ -5,7 +5,6 @@ import "./App.css";
 import Header from "./components/Header";
 import List from "./components/List";
 
-import { id, className } from "postcss-selector-parser";
 
 function App(props) {
   const [lists, setList] = useState([]);
@@ -18,8 +17,9 @@ function App(props) {
   }
 
 
-function deletar(indice){
-  setList(lists.filter((item,id)=> id !== indice))
+const deletar = indice =>{
+
+      setList(lists.filter((item,id)=> id !== indice))
       
     }
   
@@ -49,7 +49,7 @@ function deletar(indice){
         </button>
       </div>
 
-      <List lists={lists} deletar={()=>{deletar(indice)}}/>
+      <List lists={lists} deletar={deletar}/>
     </>
   );
 }
