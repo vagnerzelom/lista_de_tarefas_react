@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import "./App.css";
 
 import Header from "./components/Header";
-import List from "./components/List";
+import TaskList from "./components/TaskList";
 
 
-function App(props) {
+function App() {
   const [lists, setList] = useState([]);
   const [item, setItem] = useState("");
 
@@ -19,7 +19,7 @@ function App(props) {
 
 const deletar = indice =>{
 
-      setList(lists.filter((item,id)=> id !== indice))
+      setList(lists.filter((_,id)=> id !== indice))
       
     }
   
@@ -49,7 +49,7 @@ const deletar = indice =>{
         </button>
       </div>
 
-      <List lists={lists} deletar={deletar}/>
+      <TaskList lists={lists} deletar={deletar}/>
     </>
   );
 }
