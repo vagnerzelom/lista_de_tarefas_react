@@ -32,9 +32,16 @@ li {
   color: black;
 }
 
-.list-group {
-  flex-direction: row;
-}
 .inputContainer {
   justify-content: center;
+}
+.li {
+  border: solid 0.5px ;
+  
+  
+      
+}
+.btn {
+  border: solid
+  
 }

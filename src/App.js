@@ -27,7 +27,7 @@ const deletar = indice =>{
     <>
       <Header title="To do List" />
 
-      <div className="inputContainer input-group">
+      <div className="inputContainer input-group mb-1">
         <h3 className="pt-2">
           <b>Adicione uma tarefa</b>
         </h3>
@@ -35,7 +35,7 @@ const deletar = indice =>{
           type="text"
           value={item}
           onChange={(e) => setItem(e.target.value)}
-          className="input"
+          className="input mb-2"
           placeholder="O que quer fazer hoje?"
         />
 
